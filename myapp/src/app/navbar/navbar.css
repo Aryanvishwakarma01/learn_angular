@@ -1,0 +1,60 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+html,body{
+    height:100%;
+    width:100%;
+}
+.nav{
+    height: 10vh;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    padding:0 30px;
+    font-size:20px;
+}
+.logo{
+    height:80px;
+}
+.mid-nav{
+    display:flex;
+    list-style: none;
+    gap:50px;
+}
+.right-nav{
+    display:flex;
+    list-style: none;
+    gap:25px;
+}
+.btn2{
+    color:white;
+    background-color: rgb(26, 102, 243);
+    cursor: pointer;
+}
+.btn1{
+    padding:15px;
+    border:none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.btn1:hover{
+    color:white;
+    background-color: black;
+    transition: all ease 0.5s;
+}
+.btn2{
+    padding:15px;
+    border:none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 700;
+}
+ .btn2:hover{
+    background-color: rgb(104, 148, 230);
+    transition: all ease 0.5s;
+}
