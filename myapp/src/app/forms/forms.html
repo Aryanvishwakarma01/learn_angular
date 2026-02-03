@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+    <h1>Form handling Example</h1>
+    <h3>Username is: {{displayName}}</h3>
+<input type="text" (input)="getName($event)" value={{name}} placeholder="Enter your name" >
+<button (click) ="showName()" >
+    Get Name
+</button>
+<button (click)="setName()">
+    Set Name
+</button>
+
+<h3>Email is: {{email}}</h3>
+<input type="text" value="{{email}}" placeholder="Enter your email" #emailfield>
+<button (click)="getEmail(emailfield.value)">Get Email</button>
+<button (click)="setEmail()">Set email</button>
+</main>
+</body>
+</html>

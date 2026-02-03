@@ -3,9 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import {Navbar} from './navbar/navbar'
 import { Homepage} from './homepage/homepage'
 import {Counterapp } from './counterapp/counterapp'
+import {Mouseevent} from './mouseevent/mouseevent'
+import {Forms} from './forms/forms'
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, Homepage, Counterapp],
+  imports: [RouterOutlet, Navbar, Homepage, Counterapp,Mouseevent,Forms],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

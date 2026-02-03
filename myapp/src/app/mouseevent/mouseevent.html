@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="events-container">
+        <button (click)="handleClick($event)">Click Event</button>
+        <button (mouseenter)="handleMouseEnter($event)">Mouse Enter Event</button>
+        <button (mouseover)="handleMouseOver($event)">Mouse Over Event</button>
+        <button (mouseleave)="handleMouseLeave($event)">Mouse Leave Event</button>
+
+        <input (focus)="handleInput($event)" (input)="handleInput($event)" type="text">
+       
+    </div>
+</body>
+</html>
