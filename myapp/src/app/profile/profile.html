@@ -1,0 +1,18 @@
+<p>profile works!</p>
+
+<!-- <p>Name: {{userName | uppercase}}</p>
+<p>Joined on: {{ joinedDate | date: 'longDate'}}</p> -->
+
+<!-- <p>{{email | maskEmail}}</p> -->
+
+<p>{{name | capitalizeWords}}</p>
+
+<button (click)="changeName()">Change Name</button>
+<button (click)="mutateNames()">Mutate same reference</button>
+
+<h2>Impure pipe example</h2>
+<button (click)="toggleFirst()">Toggle first user active</button>
+
+<ul>
+    <li *ngFor="let u of users | filterActive">{{u.name}}</li>
+</ul>

@@ -1,0 +1,15 @@
+<h2>Parent Component</h2>
+
+<button (click)="changeData()">Change Data</button>
+
+<app-child [data]="parentData"></app-child>
+
+<app-card>
+  <h2>Angular Card</h2>
+  <p>This content comes from the parent</p>
+</app-card>
+
+
+<app-card>
+  <button #actionBtn>Buy Now</button>
+</app-card>

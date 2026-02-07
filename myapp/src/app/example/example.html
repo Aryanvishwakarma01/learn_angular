@@ -1,0 +1,57 @@
+ <h1>Standalone Components — Data Binding Demo</h1>
+    <hr/>
+    <!-- interpolation -->
+    <section>
+      <h2>1. Interpolation</h2>
+      <p>Hello, {{ name }}! Today is {{ today | date:'fullDate' }}</p>
+      <input [(ngModel)]="name" placeholder="Type a name"/>
+    </section>
+
+    <hr/>
+
+    <!-- property & event binding -->
+    <section>
+      <h2>2. Property & Event binding</h2>
+      <img [src]="logoUrl" [alt]="logoAlt" width="120"/>
+      <button (click)="toggleImage()">Toggle Image</button>
+      <p>Button clicked {{ clicks }} times.</p>
+    </section>
+
+    <hr/>
+
+    <!-- two-way binding example -->
+    <section>
+      <h2>3. Two-way binding (ngModel)</h2>
+      <label>Age:
+        <input type="number" [(ngModel)]="age"/>
+      </label>
+      <p>Your age is: {{ age }}</p>
+    </section>
+
+    <hr/>
+
+    <!-- class / style / attr binding -->
+    <section>
+      <h2>4. Class, style, attribute binding</h2>
+      <button [class.primary]="isPrimary" [style.fontWeight]="isPrimary ? '700' : '400'" (click)="isPrimary = !isPrimary">
+        Toggle Primary
+      </button>
+
+      <input [attr.aria-label]="ariaLabel" placeholder="ARIA attr example"/>
+    </section>
+
+    <hr/>
+
+    <!-- structural binding and pipes -->
+    <section>
+      <h2>5. Structural bindings: *ngIf and *ngFor</h2>
+      <label>Show list: <input type="checkbox" [(ngModel)]="showList"/></label>
+      <div *ngIf="showList; else noList">
+        <ul>
+          <li *ngFor="let item of items; index as i">
+            {{ i+1 }}. {{ item }}
+          </li>
+        </ul>
+      </div>
+      <ng-template #noList><p>List hidden</p></ng-template>
+    </section>
