@@ -10,9 +10,12 @@ import { Card } from './card/card';
 // import { Hooks } from './hooks/hooks';
 import { ParentComponent } from './parent/parent';
 import { Profile } from './profile/profile';
+import { Product } from './product/product';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+
 @Component({
   selector: 'app-root',
-  imports: [ Navbar, Homepage, Counterapp,Mouseevent,Forms,ExampleComponent,ParentComponent, Card, Profile],
+  imports: [ RouterOutlet,RouterLink, RouterLinkActive, Navbar, Homepage, Counterapp,Mouseevent,Forms,ExampleComponent,ParentComponent, Card, Profile, Product],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
