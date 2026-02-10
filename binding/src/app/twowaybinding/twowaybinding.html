@@ -1,1 +1,9 @@
-<p>twowaybinding works!</p>
+<h1>Two binding concept</h1>
+
+<!-- <h3>Name is: {{name}}</h3>
+<input type="text" [(ngModel)]="name" placeholder="Enter your name"> -->
+
+<h1>Name is: {{name}}</h1>
+<input type="text" (input)="changeName($event)" placeholder="Enter your name">
+
+<hr>

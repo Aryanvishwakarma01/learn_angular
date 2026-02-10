@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-twowaybinding',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './twowaybinding.html',
   styleUrl: './twowaybinding.css',
 })
 export class Twowaybinding {
+  name = 'aryan'
 
+  changeName(event: Event){
+    const val = (event.target as HTMLInputElement).value;
+    this.name  = val;
+  }
 }

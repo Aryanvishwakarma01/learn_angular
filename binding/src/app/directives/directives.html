@@ -1,0 +1,13 @@
+<h1>Use of directives</h1>
+
+<h3 *ngIf="show">I am Aryan</h3>
+
+<ul>
+    <li *ngFor="let x of students">{{x}}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let student of studentData">
+        {{student.name}}, {{student.age}}, {{student.city}}
+    </li>
+</ul>
