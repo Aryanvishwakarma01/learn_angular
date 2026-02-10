@@ -12,10 +12,13 @@ import { ParentComponent } from './parent/parent';
 import { Profile } from './profile/profile';
 import { Product } from './product/product';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
-
+import  { TemplateForm } from './template-form/template-form'
+import { ReactiveForm } from './reactive-form/reactive-form';
+import {Register} from './register/register'
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-root',
-  imports: [ RouterOutlet,RouterLink, RouterLinkActive, Navbar, Homepage, Counterapp,Mouseevent,Forms,ExampleComponent,ParentComponent, Card, Profile, Product],
+  imports: [ RouterOutlet,RouterLink, RouterLinkActive, Navbar, Homepage, Counterapp,Mouseevent,Forms,ExampleComponent,ParentComponent, Card, Profile, Product, TemplateForm, ReactiveForm, Register],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

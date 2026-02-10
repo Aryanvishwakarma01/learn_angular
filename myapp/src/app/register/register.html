@@ -1,0 +1,93 @@
+<!-- <h2>Registration Form</h2>
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()"> -->
+
+  <!-- Name -->
+  <!-- <div>
+    <label>Name:</label>
+    <input type="text" formControlName="name" />
+
+    <div *ngIf="registerForm.get('name')?.touched &&
+                registerForm.get('name')?.invalid">
+
+      <small *ngIf="registerForm.get('name')?.errors?.['required']">
+        Name is required
+      </small>
+
+      <small *ngIf="registerForm.get('name')?.errors?.['minlength']">
+        Min 3 characters
+      </small>
+    </div>
+  </div> -->
+
+  <!-- <br /> -->
+
+  <!-- Email -->
+  <!-- <div>
+    <label>Email:</label>
+    <input type="email" formControlName="email" />
+
+    <small *ngIf="registerForm.get('email')?.touched &&
+                  registerForm.get('email')?.invalid">
+      Enter valid email
+    </small>
+  </div>
+
+  <br /> -->
+
+  <!-- Password -->
+  <!-- <div>
+    <label>Password:</label>
+    <input type="password" formControlName="password" />
+
+    <small *ngIf="registerForm.get('password')?.touched &&
+                  registerForm.get('password')?.invalid">
+      Password required
+    </small>
+  </div>
+
+  <br /> -->
+
+  <!-- Age -->
+  <!-- <div>
+    <label>Age:</label>
+    <input type="number" formControlName="age" />
+  </div>
+
+  <br />
+
+  <button type="submit" [disabled]="registerForm.invalid">
+    Submit
+  </button>
+
+</form>
+
+---
+
+<h3>Debug</h3>
+<pre>{{ registerForm.value | json }}</pre>
+<pre>Valid: {{ registerForm.valid }}</pre> -->
+
+<h2>User Registration</h2>
+
+<form (ngSubmit)="submitForm()">
+
+  <label>Name:</label>
+  <input type="text"
+         [(ngModel)]="formData.name"
+         name="name"
+         required>
+
+  <br><br>
+
+  <label>Email:</label>
+  <input type="email"
+         [(ngModel)]="formData.email"
+         name="email"
+         required>
+
+  <br><br>
+
+  <button type="submit">Submit</button>
+
+</form>

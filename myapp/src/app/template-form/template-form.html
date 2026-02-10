@@ -1,0 +1,41 @@
+<h2>Template driven form</h2>
+
+<form #userForm="ngForm" (ngSubmit)="submitForm(userForm)">
+
+  <div>
+    <label>Name</label>
+    <input
+      type="text"
+      name="name"
+      [(ngModel)]="user.name"
+      required
+      minlength="3"
+      #name="ngModel"
+    />
+
+    <div *ngIf="name.invalid && name.touched">
+      Name is required (min 3 chars)
+    </div>
+  </div>
+
+  <div>
+    <label>Email</label>
+    <input
+      type="email"
+      name="email"
+      [(ngModel)]="user.email"
+      required
+      email
+      #email="ngModel"
+    />
+
+    <div *ngIf="email.invalid && email.touched">
+      Enter valid email
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="userForm.invalid">
+    Submit
+  </button>
+
+</form>

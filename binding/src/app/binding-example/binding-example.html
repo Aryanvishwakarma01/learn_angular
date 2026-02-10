@@ -1,0 +1,19 @@
+<h1>This is two way binding example</h1>
+
+<h2>Username is: {{displayName}}</h2>
+
+<input type="text" value={{name}} (input)="getName($event)" placeholder="Enter your name">
+<br> <br>
+<button (click)="showName()">Get Name</button>
+<button (click)="setName()">Set Name</button>
+
+<hr>
+
+<h2>Email is: {{email}}</h2>
+<input type="email" value={{email}} placeholder="Enter your email" #emailField> <br> <br>
+<button (click)="getEmail(emailField.value)">Get Email</button>
+<button (click)="setEmail()">Set Email</button>
+
+<hr>
+
+

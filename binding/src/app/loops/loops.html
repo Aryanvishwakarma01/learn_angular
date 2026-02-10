@@ -1,0 +1,18 @@
+<h1>Loops Implementation</h1>
+
+@for(user of users; track user){
+    <h4>{{user}}</h4>
+}
+
+<hr>
+
+<h1>Loops Implementation on Objects</h1>
+@for(student of students; track student.name){
+    <h2 style="border:2px solid black;padding:5px;">
+        <span>Name is: {{student.name}}</span> <br>
+        <span>Age is: {{student.age}}</span> <br>
+        <button (click)="getName(student.name)">Get Name on Alert</button>
+    </h2>
+}
+
+<hr>

@@ -1,0 +1,31 @@
+<h2>Reactive Form</h2>
+
+<form [formGroup]="userForm" (ngSubmit)="submit()">
+
+  <div>
+    <label>Name</label>
+    <input type="text" formControlName="name" />
+
+    <div *ngIf="userForm.controls['name'].invalid &&
+userForm.controls['name'].touched
+">
+      Name is required (min 3 chars)
+    </div>
+  </div>
+
+  <div>
+    <label>Email</label>
+    <input type="email" formControlName="email" />
+
+    <div *ngIf="userForm.controls['email'].invalid &&
+userForm.controls['email'].touched
+">
+      Enter valid email
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="userForm.invalid">
+    Submit
+  </button>
+
+</form>

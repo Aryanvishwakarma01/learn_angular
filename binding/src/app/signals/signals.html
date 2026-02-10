@@ -1,0 +1,15 @@
+<h1>Usage of Signals</h1>
+
+<h3>{{count()}}</h3>
+
+<!-- <button (click)="updateCount('inc')">Increment</button>
+<button (click)="updateCount('dec')">Decrement</button> -->
+
+<button (click)="count.set(count()+1)">Increase</button>
+<button (click)="count.set(count()-1)">Decrease</button>
+
+<button (click)="showValue()">Show value</button>
+<h3>{{userName()}}</h3>
+<button (click)="userName.set('ravi')">Update Username</button>
+
+<hr>
