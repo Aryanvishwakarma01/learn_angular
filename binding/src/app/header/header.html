@@ -1,0 +1,14 @@
+<div>
+    <h2>Logo</h2>
+<ul>
+    <li>
+        <a routerLink="/home" routerLinkActive="active">Home</a>
+    </li>
+    <li>
+        <a routerLink="/about" routerLinkActive="active">About</a>
+    </li>
+</ul>
+</div>
+<br>
+<a [routerLink]="['profile', {name:'Aryan'}]">Go to Profile</a>
+<router-outlet></router-outlet>

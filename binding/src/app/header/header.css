@@ -1,0 +1,17 @@
+.active{
+    background-color: yellow;
+}
+ul{
+    display:flex;
+    gap:20px;
+
+}
+ul>li{
+    list-style-type: none;
+}
+div{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 20px;
+}

@@ -11,3 +11,5 @@
         {{student.name}}, {{student.age}}, {{student.city}}
     </li>
 </ul>
+<button (click)="toggle()">Click to hightlight the below text </button>
+<p [ngClass]="{'highlight':isActive}" [ngStyle]="getColor()">Highlight me</p>
