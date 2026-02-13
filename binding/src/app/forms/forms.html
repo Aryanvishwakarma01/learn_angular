@@ -1,0 +1,43 @@
+<h1>Example of Reactive Forms</h1>
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+  <input 
+    type="text" 
+    placeholder="Enter your name" 
+    formControlName="name"
+  >
+
+  <span class="error" *ngIf="name?.invalid && name?.touched">
+    <span *ngIf="name?.errors?.['required']">
+      Name is required
+    </span>
+    <span *ngIf="name?.errors?.['minlength']">
+      Minimum 5 characters required
+    </span>
+  </span>
+
+  <br><br>
+
+  <input 
+    type="password" 
+    placeholder="Enter your password" 
+    formControlName="password"
+  >
+
+  <span class="error" *ngIf="password?.invalid && password?.touched">
+    <span *ngIf="password?.errors?.['required']">
+      Password is required
+    </span>
+    <span *ngIf="password?.errors?.['pattern']">
+      Must contain uppercase, lowercase, number & special character
+    </span>
+  </span>
+
+  <br><br>
+
+  <button type="submit" [disabled]="profileForm.invalid">
+    Submit
+  </button>
+
+</form>

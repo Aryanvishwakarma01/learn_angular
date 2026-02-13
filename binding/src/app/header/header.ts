@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,5 +8,13 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   styleUrl: './header.css',
 })
 export class Header {
+  constructor(private router: Router){
 
+  }
+  openUser(name:string){
+    this.router.navigate(['/profile', name])
+  }
+
+  
+  
 }

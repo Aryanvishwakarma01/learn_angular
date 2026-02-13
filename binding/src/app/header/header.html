@@ -10,5 +10,21 @@
 </ul>
 </div>
 <br>
-<a [routerLink]="['profile', {name:'Aryan'}]">Go to Profile</a>
+<!-- <a [routerLink]="['profile', {name:'Aryan'}]">Go to Aryan's Profile</a> <br>
+<a [routerLink]="['profile', {name:'Jasnoor'}]">Go to Jasnoor's Profile</a> <br>
+<a [routerLink]="['profile', {name:'Awdhesh'}]">Go to Awadhesh's Profile</a> -->
+
+<a (click)="openUser('Aryan')" style="color:blue; cursor:pointer; text-decoration: underline;">Go to Aryan's Profile</a> <br>
+<a (click)="openUser('Jasnoor')" style="color:blue; cursor:pointer; text-decoration: underline;">Go to Jasnoor's Profile</a> <br>
+<a (click)="openUser('Awadhesh')" style="color:blue; cursor:pointer; text-decoration: underline;">Go to Awadhesh's Profile</a> <br>
+<a [routerLink]="['/profile', 'Ayush']" [queryParams]="{tab:'profile', mode:'edit'}"> example button for query paramter</a>
+
+<hr>
+<h1>Example of Dynamic Routing</h1>
+<a routerLink="user/100/aryan">Go to 100 User Profile Page</a>  <br>
+<a routerLink="user/105/jasnoor">Go to 105 User Profile Page</a> <br>
+<a routerLink="user/110/awadhesh">Go to 110 User Profile Page</a> <br>
+<a routerLink="user/115/sumit">Go to 115 User Profile Page</a> <br>
+<a routerLink="user/120/himanshu">Go to 120 User Profile Page</a> <br>
+<a routerLink="user/125/dallla">Go to 125 User Profile Page</a>
 <router-outlet></router-outlet>
