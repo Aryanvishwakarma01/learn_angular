@@ -9,15 +9,17 @@ import { SetingsComponent } from './dashboard/settings.component';
 import { SetingsGeneralComponent } from './dashboard/settings-general.component';
 import { SetingsSecurityComponent } from './dashboard/settings-security.component';
 import { UserPage } from './user-page/user-page';
-
+import { Dashboard } from './dashboard/dashboard';
+import { Login } from './login/login';
 export const routes: Routes = [
-    { path: '', component: Headers },
-    {path:"home", component:Home},
-    {path:'profile/:name', component:Profile},
-    {path:'about', component:About},
-    {path:'profile', component:Profile},
-    {path:"user/:id/:name", component:UserPage},
-    {path:'**', component:PageNotFound},
+    { path: '', component: Login },
+    // {path:"home", component:Home},
+    // {path:'profile/:name', component:Profile},
+    // {path:'about', component:About},
+    {path:'dashboard', component:Dashboard},
+    // {path:'profile', component:Profile},
+    // {path:"user/:id/:name", component:UserPage},
+    // {path:'**', component:PageNotFound},
 ];
 
 // export const routes: Routes = [

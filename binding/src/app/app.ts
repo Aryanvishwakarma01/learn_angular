@@ -9,9 +9,10 @@ import { Directives } from './directives/directives';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { Header } from './header/header';
 import { Forms } from './forms/forms';
+import { Login } from './login/login';
 @Component({
   selector: 'app-root',
-  imports: [ BindingExample,Ifelse, Loops, Signals, Twowaybinding, Todo, Directives, RouterOutlet, RouterLink, RouterLinkActive, Header, Forms],
+  imports: [ BindingExample,Ifelse, Loops, Signals, Twowaybinding, Todo, Directives, RouterOutlet, RouterLink, RouterLinkActive, Header, Forms, Login],
   templateUrl: './app.html',
   // template:`
   //   <h1>Angular Standalone Nested Routing Example</h1>
@@ -24,5 +25,5 @@ import { Forms } from './forms/forms';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('binding');
+  title ='Hello, binding'
 }

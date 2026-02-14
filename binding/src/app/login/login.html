@@ -1,0 +1,25 @@
+ <h2>Login Page</h2>
+
+    <form (ngSubmit)="login()">
+      <input
+        type="text"
+        name="username"
+        [(ngModel)]="username"
+        placeholder="Enter Username"
+        required
+      />
+
+      <input
+        type="password"
+        name="password"
+        [(ngModel)]="password"
+        placeholder="Enter Password"
+        required
+      />
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p *ngIf="errorMessage" style="color:red;">
+      {{ errorMessage }}
+    </p>
